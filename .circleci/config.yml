@@ -50,3 +50,7 @@ workflows:
       - python-safety
       # Deploy to Heroku
       - heroku/deploy-via-git
+      # run DAST
+      - dast:
+          requires:
+            - heroku/deploy-via-git
